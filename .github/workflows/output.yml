@@ -1,7 +1,6 @@
 name: Show exam.txt on runner console
 
-on: [push, workflow_dispatch]         trigger
-
+on: [push, workflow_dispatch]
 jobs:
   show-file:
     runs-on: ubuntu-latest
