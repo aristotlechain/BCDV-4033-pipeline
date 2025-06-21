@@ -1,0 +1,17 @@
+name: Show exam.txt on runner console
+
+on: [push, workflow_dispatch]         trigger
+
+jobs:
+  show-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Print exam.txt
+        run: |
+          echo "=== Contents of exam.txt ==="
+          cat exam.txt
+          echo "============================"
+
